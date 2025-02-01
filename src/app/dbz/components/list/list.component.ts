@@ -12,9 +12,9 @@ export class ListComponent {
   public characters: Character[] = []
 
   @Output()
-  public onDeleteCharacter: EventEmitter<number> = new EventEmitter()
+  public onDeleteCharacterById: EventEmitter<string> = new EventEmitter()
 
-  public emitOnDeleteCharacter(index: number): void {
-    this.onDeleteCharacter.emit(index)
+  public emitOnDeleteCharacter(id: string): void {
+    this.onDeleteCharacterById.emit(id)
   }
 }
